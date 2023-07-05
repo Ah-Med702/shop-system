@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>system</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header text-center my-3">
+            <div class="h1 text-uppercase">cruds</div>
+            <div class="h4">system to your shop</div>
+        </div>
+        <div class="inputs col">
+            <div class="row w-100 mx-0 my-2">
+                <input class="w-100" type="text" placeholder="title" id="title">
+            </div>
+            <div class="row w-100 mx-0 my-2">
+                <input onkeyup="setTotal()" class="col me-2" type="number" placeholder="price" id="price">
+                <input onkeyup="setTotal()" class="col me-2" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="setTotal()" class="col me-2" type="number" placeholder="discount" id="discount">
+                <div class="col p-0">
+                    <p class="m-0 py-2 px-2 rounded" id="total"></p>
+                </div>
+            </div>
+            <div class="row w-100 mx-0 my-2">
+                <input class="col me-2" type="number" placeholder="count" id="count">
+                <input class="col" type="text" placeholder="category" id="category">
+            </div>
+            <div class="row w-100 mx-0 my-2">
+                <button onclick="create()" class="btn w-100  bg-dark-subtle my-1" id="createBtn">create</button>
+            </div>
+            <div class="row w-100 mx-0 my-2">
+                <input onkeyup="search(this.value)" type="text" placeholder="search by title" id="searchInput">
+            </div>
+            <div class="row w-100 mx-0 my-2">
+                <button onclick="setSearch(this.id)" class="btn bg-dark-subtle col me-1" id="titleSearch">search by
+                    title</button>
+                <button onclick="setSearch(this.id)" class="btn bg-dark-subtle col ms-1" id="categorySearch">search
+                    by
+                    category</button>
+                <button onclick="deleteAll()" class="btn bg-dark-subtle w-100  mt-4" id="deleteAllBtn"></button>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>#</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
+        <button class="btn position-fixed btn-secondary" id="scrollBtn"><i class="fa fa-arrow-up"></i></button>
+        <button onclick="changeColorMode()" class="btn position-absolute btn-secondary" id="colorModeBtn">
+            <i id="sun" class="fas fa-sun"></i> <i id="moon" class="fas fa-moon"></i>
+        </button>
+
+    </div>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.map"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
