@@ -51,8 +51,18 @@ td {
     display: none;
 }
 
+.media-span {
+    display: none;
+    margin: 50px auto;
+    text-align: center;
+}
+
 @media (max-width: 767px) {
     .container {
         display: none;
+    }
+
+    .media-span{
+        display: block;
     }
 }
